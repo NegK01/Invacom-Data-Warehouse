@@ -99,7 +99,6 @@ query_ratings = (
 cargar_csv_en_bloques("ratings.csv", query_ratings, chunk_size=1000000)
 
 
-# 3. Cerrar conexión
 cursor.close()
 connection.close()
 print("FIN")

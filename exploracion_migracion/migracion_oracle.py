@@ -20,7 +20,7 @@ cursor = connection.cursor()
 def cargar_csv_en_bloques(
     archivo_csv, query_sql, chunk_size=100000, parse_cols=None
 ):
-  print(f"Iniciando carga de {archivo_csv}...")
+  
   contador = 0
 
   for chunk in pd.read_csv(
@@ -61,7 +61,7 @@ def cargar_csv_en_bloques(
     contador += len(datos)
     print(f"-> Insertados {contador} registros de {archivo_csv}...")
 
-  print(f" ¡{archivo_csv} importado completamente!\n")
+
 
 
 # --- EJECUCIÓN DE LAS CARGAS ---
@@ -102,4 +102,4 @@ cargar_csv_en_bloques("ratings.csv", query_ratings, chunk_size=1000000)
 # 3. Cerrar conexión
 cursor.close()
 connection.close()
-print("¡Migración de todos los archivos finalizada con éxito!")
+print("FIN")

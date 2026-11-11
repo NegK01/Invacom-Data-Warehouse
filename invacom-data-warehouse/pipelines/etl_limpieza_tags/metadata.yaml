@@ -26,13 +26,13 @@ blocks:
   language: python
   name: transformar_tags
   retry_config: null
-  status: updated
+  status: executed
   timeout: null
   type: transformer
   upstream_blocks:
   - extraer_tags
   uuid: transformar_tags
-- all_upstream_blocks_executed: false
+- all_upstream_blocks_executed: true
   color: null
   configuration: {}
   downstream_blocks: []
@@ -70,5 +70,5 @@ spark_config: {}
 tags: []
 type: python
 uuid: etl_limpieza_tags
-variables_dir: C:\Users\Admin/.mage_data\invacom-data-warehouse
+variables_dir: C:\Users\makim/.mage_data\invacom-data-warehouse
 widgets: []

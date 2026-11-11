@@ -70,5 +70,5 @@ spark_config: {}
 tags: []
 type: python
 uuid: etl_limpieza_genome_tags
-variables_dir: C:\Users\Admin/.mage_data\invacom-data-warehouse
+variables_dir: C:\Users\makim/.mage_data\invacom-data-warehouse
 widgets: []

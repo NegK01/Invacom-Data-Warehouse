@@ -94,6 +94,12 @@ def transformar_titulo(movie_id, original):
     if movie_id == 171749:
         titulo = titulo.replace(': Desu nôto', ' (Desu nôto)')
 
+    if movie_id == 120618:
+        titulo = titulo.replace('Editor?s Eye', "Editor's Eye")
+
+    if movie_id == 172129:
+        titulo = titulo.replace(' AKA Wagstaffe', ' (a.k.a. Wagstaffe)')
+
     alternativas = []
     periodo = None
 

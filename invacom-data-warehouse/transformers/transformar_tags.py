@@ -18,6 +18,36 @@ PATRON_DESCARTAR = re.compile(
     flags=re.IGNORECASE,
 )
 
+AJUSTES_TAGS = {
+    '(mostly) for kids': 'Mostly for kids',
+    '(not really) a true story': 'Not really a true story',
+    '(too) slow-paced': 'Too slow-paced',
+    '(uk) national theatre live': 'National Theatre Live (UK)',
+    '(s)vcd': 'VCD/SVCD',
+    'svcd': 'SVCD',
+    '007 (series)': '007',
+    '007 movies are bad': None,
+    '<3': None,
+    'andr? t?chin?': 'André Téchiné',
+    'thought-provoking': 'Thought-provoking',
+    'thought provoking': 'Thought-provoking',
+    'thoughtprovoking': 'Thought-provoking',
+    'sci-fi': 'Sci-fi',
+    'science fiction': 'Sci-fi',
+    'scifi': 'Sci-fi',
+    'sci fi': 'Sci-fi',
+    'science-fiction': 'Sci-fi',
+    'world war i': 'World War I',
+    'wwi': 'World War I',
+    'world war 1': 'World War I',
+    'ww1': 'World War I',
+    'world war ii': 'World War II',
+    'wwii': 'World War II',
+    'world war 2': 'World War II',
+    'ww2': 'World War II',
+    'second world war': 'World War II',
+}
+
 def limpiar_codificacion_y_espacios(valor):
     texto = ftfy.fix_encoding(str(valor))
     texto = re.sub(
@@ -65,8 +95,8 @@ def normalizar_tag(valor):
     if es_etiqueta_descartable(texto):
         return None
 
-    texto = limpiar_bordes_y_simbolos(texto)
-    return capitalizar_primera_letra(texto)
+    texto = ' '.join(limpiar_bordes_y_simbolos(texto).split())
+    return AJUSTES_TAGS.get(texto.lower(), capitalizar_primera_letra(texto))
 
 def unificar_escritura_etiquetas(datos):
     conteos = (

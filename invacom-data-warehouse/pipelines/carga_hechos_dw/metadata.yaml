@@ -62,7 +62,7 @@ executor_config: {}
 executor_count: 1
 executor_type: null
 extensions: {}
-name: etl_dw_hechos
+name: carga_hechos_dw
 notification_config: {}
 remote_variables_dir: null
 retry_config: {}
@@ -72,6 +72,6 @@ settings:
 spark_config: {}
 tags: []
 type: python
-uuid: etl_dw_hechos
-variables_dir: C:\Users\makim/.mage_data\invacom-data-warehouse
+uuid: carga_hechos_dw
+variables_dir: C:\Users\Admin/.mage_data\invacom-data-warehouse
 widgets: []
